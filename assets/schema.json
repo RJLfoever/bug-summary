@@ -1,0 +1,27 @@
+[
+  {"name": "提交标题", "type": "text", "description": "Git 提交标题（主字段）"},
+  {"name": "commit_hash", "type": "text", "description": "Git 完整 commit 哈希，用于增量去重"},
+  {"name": "仓库", "type": "text", "description": "仓库名 / URL"},
+  {"name": "提交时间", "type": "datetime", "description": "提交时间"},
+  {"name": "作者", "type": "text", "description": "提交作者"},
+  {"name": "类型", "type": "select", "multiple": false, "options": [
+    {"name": "需求开发"}, {"name": "Bug修复"}, {"name": "重构"}, {"name": "文档"}, {"name": "测试"}, {"name": "其他"}
+  ], "description": "提交类型：需求开发 vs Bug修复 等"},
+  {"name": "摘要", "type": "text", "description": "人可读的变更概述（做了什么）"},
+  {"name": "现象", "type": "text", "description": "Bug 现象：复现症状 / 报错信息 / 用户反馈"},
+  {"name": "原因分析", "type": "text", "description": "根因分析：为什么会出问题"},
+  {"name": "解决方案", "type": "text", "description": "解决方案：如何修复 / 验证方式"},
+  {"name": "涉及文件", "type": "text", "description": "变更涉及的文件（逗号分隔）"},
+  {"name": "变更统计", "type": "text", "description": "diff 统计，如 +12/-3"},
+  {"name": "关联链接", "type": "text", "style": {"type": "url"}, "description": "关联 issue / PR / 工单链接"},
+  {"name": "标签", "type": "select", "multiple": true, "options": [
+    {"name": "空指针"}, {"name": "内存泄漏"}, {"name": "并发"}, {"name": "性能"},
+    {"name": "边界条件"}, {"name": "配置"}, {"name": "数据"}, {"name": "依赖"},
+    {"name": "兼容性"}, {"name": "安全"}, {"name": "逻辑错误"}, {"name": "其他"}
+  ], "description": "问题类别标签（可多选）"},
+  {"name": "置信度", "type": "number", "description": "类型/分类置信度 0-1"},
+  {"name": "分析来源", "type": "select", "multiple": false, "options": [
+    {"name": "auto"}, {"name": "agent"}
+  ], "description": "auto=脚本自动，agent=AI 深度分析"},
+  {"name": "创建时间", "type": "created_at", "description": "记录写入时间"}
+]
