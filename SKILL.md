@@ -7,6 +7,7 @@ metadata:
   requires:
     bins: ["git", "lark-cli", "python"]
   version: "1.0.0"
+  tags: ["git", "bug-tracking", "bitable", "feishu", "lark", "knowledge-base", "daily-report", "bug-fix", "commit-analysis"]
 ---
 
 # Bug Summary — Git 提交抓取与飞书 Bug 知识库
